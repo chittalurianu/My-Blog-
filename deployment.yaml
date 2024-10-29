@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: django-deployment
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: django
@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: django
-        image: username/your-django-app:latest
+        image: aneri97/ myblog:latest
         ports:
-        - containerPort: 8000
+        - containerPort: 8080
